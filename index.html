@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0050A9">
+  <title>Клуб неврологов — главная (макет)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="assets/club.css">
+  <link rel="stylesheet" href="assets/ai.css">
+</head>
+<body data-page="home">
+<div id="page" class="page">
+
+  <!-- Строка выпуска -->
+  <div class="issue">
+    <span class="label">Пятница, 3 октября 2026</span>
+    <span class="label issue-extra">29 экспертов клуба</span>
+    <span class="label issue-extra">Клинразборы · Шпаргалки · Лекции</span>
+    <span class="label issue-ai"><b>ai</b> · 34 источника · 12 новых материалов за сутки</span>
+  </div>
+
+  <!-- Первая полоса: главный материал клуба + «Сегодня в неврологии» (виджет ai-части, ТЗ п. 3) -->
+  <section class="front">
+    <a class="card lead" href="article.html">
+      <div class="media"><img src="assets/img/art-ae.jpg" alt=""></div>
+      <div class="label mt-8"><b>Статья</b><span class="dot">·</span>29 сентября 2026<span class="dot">·</span>7 мин</div>
+      <h1 class="h1">Аутоиммунные энцефалиты в&nbsp;практике невролога: когда «психиатрия» оказывается иммунологией</h1>
+      <p class="lede">Острый психоз, судороги и когнитивное снижение у молодого пациента — повод исключить аутоиммунный энцефалит до назначения антипсихотиков. Разбираем красные флаги и алгоритм обследования.</p>
+      <div class="byline">
+        <img src="assets/img/exp09.jpg" alt="">
+        <div><b>Д-р мед. наук Поспелова М.Л.</b><span>НМИЦ им. В.А. Алмазова</span></div>
+      </div>
+    </a>
+
+    <aside class="today" aria-label="Сегодня в неврологии">
+      <div class="today-head">
+        <span class="label">Сегодня в неврологии</span>
+        <span class="live">ai · +225 за сутки</span>
+      </div>
+      <a class="today-item" href="https://ai.neurology-club.ru">
+        <div class="label"><b>Нервно-мышечные заболевания</b></div>
+        <h3 class="h4">Современные и перспективные методы лечения миастении</h3>
+        <div class="label">Обзор<span class="dot">·</span>Neurology</div>
+      </a>
+      <a class="today-item" href="https://ai.neurology-club.ru">
+        <div class="label"><b>Рассеянный склероз</b></div>
+        <h3 class="h4">Следует ли проводить скрининг рассеянного склероза в группах высокого риска?</h3>
+        <div class="label">Мнение<span class="dot">·</span>Healio</div>
+      </a>
+      <a class="today-item" href="https://ai.neurology-club.ru">
+        <div class="label"><b>Эпилепсия</b></div>
+        <h3 class="h4">Недооценка бремени вторичной эпилепсии в глобальных оценках здоровья</h3>
+        <div class="label">Когортное<span class="dot">·</span>Epilepsia</div>
+      </a>
+      <a class="today-item" href="https://ai.neurology-club.ru">
+        <div class="label"><b>Цереброваскулярные заболевания</b></div>
+        <h3 class="h4">Терапия, направленная на PCSK9, и риск инсульта и деменции</h3>
+        <div class="label">Метаанализ<span class="dot">·</span>Stroke</div>
+      </a>
+      <a class="today-item" href="https://ai.neurology-club.ru">
+        <div class="label"><b>Цереброваскулярные заболевания</b></div>
+        <h3 class="h4">Робот с сенсорной обратной связью в реабилитации руки после инсульта</h3>
+        <div class="label">РКИ<span class="dot">·</span>Frontiers in Neurology</div>
+      </a>
+      <div class="today-foot">
+        <span class="small">Резюме мировых публикаций на русском</span>
+        <a class="more" href="https://ai.neurology-club.ru">Все материалы</a>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Актуальное за неделю -->
+  <section class="section">
+    <div class="section-head"><h2 class="h2">Актуальное за неделю</h2><a class="more" href="articles.html">Все материалы клуба</a></div>
+    <div class="grid-4">
+      <a class="card" href="article.html">
+        <div class="media ratio-4x3"><img src="assets/img/art-diplopia.jpg" alt=""></div>
+        <div class="label"><b>Клинразбор</b><span class="dot">·</span>14.09<span class="dot">·</span>2 мин</div>
+        <h3 class="h4">Пациент с диплопией и парезом</h3>
+      </a>
+      <a class="card" href="cheatsheet.html">
+        <div class="media ratio-4x3"><img src="assets/img/art-vestib.jpg" alt=""></div>
+        <div class="label"><b>Шпаргалка</b><span class="dot">·</span>24.09<span class="dot">·</span>2 мин</div>
+        <h3 class="h4">Дифференциальная диагностика центрального и периферического вестибулярного синдрома</h3>
+      </a>
+      <a class="card" href="cheatsheet.html">
+        <div class="media ratio-4x3"><img src="assets/img/art-ae-criteria.jpg" alt=""></div>
+        <div class="label"><b>Шпаргалка</b><span class="dot">·</span>17.09<span class="dot">·</span>2 мин</div>
+        <h3 class="h4">Диагностические критерии аутоиммунного энцефалита (Graus F., 2016)</h3>
+      </a>
+      <a class="card" href="article-locked.html">
+        <div class="media ratio-4x3"><img src="assets/img/art-anxiety.jpg" alt=""></div>
+        <div class="label"><b>Статья</b><span class="dot">·</span>08.09<span class="dot">·</span>9 мин</div>
+        <h3 class="h4">Тревожные расстройства: с чем приходит пациент к врачу-интернисту?</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Образовательные программы (баннер, ТЗ п. 3). Постеры программ — фирменные
+       ключевые визуалы клиента со своим текстом: показываем как обложки, не обрезаем. -->
+  <section class="section">
+    <div class="band program-band">
+      <div class="copy">
+        <span class="label">Образовательные программы клуба</span>
+        <h2 class="h1">Учиться у экспертов клуба&nbsp;— в своём темпе</h2>
+        <p class="body">Интерактивные курсы, клинические квесты и спецпроекты: от терапии боли до нейрокогнитивных нарушений. Баллы НМО по завершении.</p>
+        <div class="flex gap-12 wrap mt-8">
+          <a class="btn btn-light" href="programs.html">Все программы</a>
+        </div>
+        <div class="program-list">
+          <a href="#"><b>5</b>активных программ</a>
+          <a href="#"><b>НМО</b>баллы за курсы</a>
+          <a href="#"><b>Бесплатно</b>для членов клуба</a>
+        </div>
+      </div>
+      <div class="posters">
+        <a href="program.html"><img src="assets/img/prj0.jpg" alt="Нейрокод 2.0"><span>Нейрокод 2.0</span></a>
+        <a href="#"><img src="assets/img/prj2.jpg" alt="Эволюция терапии боли"><span>Эволюция терапии боли</span></a>
+        <a href="#"><img src="assets/img/prj1.jpg" alt="Жизнь под знаком «Актив»"><span>Жизнь под знаком «Актив»</span></a>
+        <a href="#"><img src="assets/img/prj3.jpg" alt="Интерактивная неврология"><span>Интерактивная неврология</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Новости + Календарь событий (из ai-части в формате клуба, ТЗ п. 3) -->
+  <section class="section grid-2" style="gap:56px">
+    <div>
+      <div class="section-head"><h2 class="h2">Новости</h2><a class="more" href="https://ai.neurology-club.ru/section/news">Все новости</a></div>
+      <a class="news-item" href="#"><span class="label">2 окт</span><div><h3 class="h4">14 октября пройдёт научно-практическая конференция «КТ и МРТ в неврологии»</h3><div class="label mt-8">Конференции</div></div></a>
+      <a class="news-item" href="#"><span class="label">30 сен</span><div><h3 class="h4">Рецептор SORLA защищает мозг от токсичности тау-белка: новый шаг в лечении болезни Альцгеймера</h3><div class="label mt-8">Болезнь Альцгеймера</div></div></a>
+      <a class="news-item" href="#"><span class="label">30 сен</span><div><h3 class="h4">Метаанализ подтвердил эффективность кандесартана для профилактики эпизодической мигрени</h3><div class="label mt-8">Мигрень и головная боль</div></div></a>
+      <a class="news-item" href="#"><span class="label">28 сен</span><div><h3 class="h4">В Сеченовском университете рассказали о доклиническом исследовании новой молекулы для лечения полинейропатии</h3><div class="label mt-8">Периферическая нервная система</div></div></a>
+    </div>
+    <div>
+      <div class="section-head"><h2 class="h2">Календарь событий</h2><a class="more" href="https://ai.neurology-club.ru/events">Весь календарь</a></div>
+      <div class="cal-week">
+        <div class="muted"><small>пн</small><b>29</b></div>
+        <div class="muted"><small>вт</small><b>30</b></div>
+        <div class="muted"><small>ср</small><b>1</b></div>
+        <div class="muted"><small>чт</small><b>2</b></div>
+        <div class="today has"><small>пт</small><b>3</b></div>
+        <div class="has"><small>сб</small><b>4</b></div>
+        <div><small>вс</small><b>5</b></div>
+      </div>
+      <a class="event" href="#"><div class="date"><b>3</b><span>окт · сб</span></div><div><h3 class="h4">II Всероссийский междисциплинарный конгресс «Боль в спине 2026»</h3><div class="label mt-8">Москва<span class="dot">·</span>РОИБ</div></div></a>
+      <a class="event" href="#"><div class="date"><b>4</b><span>окт · вс</span></div><div><h3 class="h4">MDS International Congress of Parkinson's Disease and Movement Disorders</h3><div class="label mt-8">Международный<span class="dot">·</span>MDS</div></div></a>
+      <a class="event" href="#"><div class="date"><b>6</b><span>окт · пн</span></div><div><h3 class="h4">Актуальные вопросы взрослой и детской неврологии</h3><div class="label mt-8">Онлайн<span class="dot">·</span>NeuroReab</div></div></a>
+      <a class="event" href="#"><div class="date"><b>7</b><span>окт · вт</span></div><div><h3 class="h4">Симпозиум «Инсульт в клинических разборах: лечение, профилактика и реабилитация»</h3><div class="label mt-8">Красноярск<span class="dot">·</span>Общество доказательной неврологии</div></div></a>
+    </div>
+  </section>
+
+  <!-- Эксперты клуба (бывшая «Редколлегия», ТЗ п. 3) -->
+  <section class="section">
+    <div class="section-head"><h2 class="h2">Эксперты клуба</h2><a class="more" href="experts.html">Все 29 экспертов</a></div>
+    <div class="grid-6" data-shuffle data-show="6">
+      <!-- все эксперты; при открытии — 6 случайных (иерархии нет, решение клиента 23.10) -->
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp00.jpg" alt=""></div><h3 class="h4">Зальмунин К.Ю.</h3><p class="small">Доцент · НМИЦ ПН им. В.М. Бехтерева</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp01.jpg" alt=""></div><h3 class="h4">Соловьева Э.Ю.</h3><p class="small">Профессор · ФДПО ИНОПР РНИМУ им.Н.И.Пирогова</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp02.jpg" alt=""></div><h3 class="h4">Якупов Э.З.</h3><p class="small">Профессор · Центр профессора Якупова (Казань)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp03.jpg" alt=""></div><h3 class="h4">Иващенко Д.В.</h3><p class="small">Доктор медицинских наук · ФГБОУ ДПО РМАНПО Минздрава России (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp04.jpg" alt=""></div><h3 class="h4">Зуев А.А.</h3><p class="small">Профессор · Центр нейрохирургии (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp05.jpg" alt=""></div><h3 class="h4">Григорьева В.Н.</h3><p class="small">Заведующая кафедрой неврологии · ФГБОУ ВО «Нижегородская государственная медицинская академия» Минздрава России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp06.jpg" alt=""></div><h3 class="h4">Екушева Е.В.</h3><p class="small">Профессор · ФГБОУ ДПО ИПК ФМБА России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp07.jpg" alt=""></div><h3 class="h4">Курушина О.В.</h3><p class="small">Профессор · ФГБОУ ВО «Волгоградский государственный медицинский университет» Минздрава России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp08.jpg" alt=""></div><h3 class="h4">Ахмадеева Л.Р.</h3><p class="small">Профессор · ФГБОУ ВО «Башкирский государственный медицинский университет» Минздрава России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp09.jpg" alt=""></div><h3 class="h4">Поспелова М.Л.</h3><p class="small">Доктор медицинских наук · ФГБУ «НМИЦ им. В.А. Алмазова» Минздрава России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp10.jpg" alt=""></div><h3 class="h4">Широков В.А.</h3><p class="small">Профессор · ФГБОУ ВО «Уральский государственный медицинский университет» Минздрава России</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp11.jpg" alt=""></div><h3 class="h4">Камчатнов П.Р.</h3><p class="small">Профессор · ФГАОУ ВО «РНИМУ им. Н.И. Пирогова» Минздрава России (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp12.jpg" alt=""></div><h3 class="h4">Орлова О.Р.</h3><p class="small">Профессор · ФГАОУ ВО «Первый МГМУ им. И.М. Сеченова» Минздрава России (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp13.jpg" alt=""></div><h3 class="h4">Зыков В.П.</h3><p class="small">Профессор · ФГБОУ ДПО РМАНПО МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp14.jpg" alt=""></div><h3 class="h4">Замерград М.В.</h3><p class="small">Профессор · ГБУЗМ «ГКБ им. И.В. Давыдовского ДЗ г. Москва» (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp15.jpg" alt=""></div><h3 class="h4">Табеева Г.Р.</h3><p class="small">Профессор · Первый МГМУ им. И.М. Сеченова (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp16.jpg" alt=""></div><h3 class="h4">Сиволап Ю.П.</h3><p class="small">Профессор · РУДН им. Патриса Лумумбы (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp17.jpg" alt=""></div><h3 class="h4">Медведев В.Э.</h3><p class="small">Доцент · РУДН им. Патриса Лумумбы (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp18.jpg" alt=""></div><h3 class="h4">Наумов А.В.</h3><p class="small">Профессор · РНИМУ им. Н. И. Пирогова МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp19.jpg" alt=""></div><h3 class="h4">Данилов Ал.Б.</h3><p class="small">Профессор · Первый МГМУ им. И.М. Сеченова (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp20.jpg" alt=""></div><h3 class="h4">Захаров В.В.</h3><p class="small">Профессор · Первый МГМУ им. И.М. Сеченова МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp21.jpg" alt=""></div><h3 class="h4">Полуэктов М.Г.</h3><p class="small">Доцент · Первый МГМУ им. И.М. Сеченова МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp22.jpg" alt=""></div><h3 class="h4">Шишкова В.Н.</h3><p class="small">Доктор медицинских наук · НМИЦ терапии и профилактической медицины МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp23.jpg" alt=""></div><h3 class="h4">Ройтман Е.В.</h3><p class="small">Профессор · РНИМУ им. Н. И. Пирогова (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp24.jpg" alt=""></div><h3 class="h4">Акарачкова Е.С.</h3><p class="small">Доктор медицинских наук · Первый МГМУ им. И.М. Сеченова МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp25.jpg" alt=""></div><h3 class="h4">Чурюканов М.В.</h3><p class="small">Доцент · Первый МГМУ им. И.М. Сеченова МЗ РФ (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp26.jpg" alt=""></div><h3 class="h4">Лихтерман Л.Б.</h3><p class="small">Профессор · НМИЦ нейрохирургии им. Н.Н. Бурденко</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp27.jpg" alt=""></div><h3 class="h4">Кукушкин М.Л.</h3><p class="small">Профессор · Научно-исследовательский институт общей патологии и патофизиологии (Москва)</p></a>
+      <a class="card portrait " href="expert.html"><div class="media"><img src="assets/img/exp28.jpg" alt=""></div><h3 class="h4">Искра Д.А.</h3><p class="small">Профессор · Военно-медицинская академия им. С.М. Кирова МО РФ (Санкт-Петербург)</p></a>
+    </div>
+  </section>
+
+  <!-- Переход на ai-часть (баннер, ТЗ п. 3) -->
+  <section class="section">
+    <div class="band ai-band">
+      <div>
+        <span class="label">ai.neurology-club.ru</span>
+        <h2 class="h1 mt-12">Мировая неврология — на русском языке в течение 24 часов</h2>
+        <p class="body mt-16" style="max-width:520px">Каждое утро — резюме новых исследований, клинических рекомендаций и мнений экспертов из ведущих журналов. Сверено с оригиналом.</p>
+        <a class="btn btn-primary mt-24" href="https://ai.neurology-club.ru">Перейти на ai-портал</a>
+      </div>
+      <div class="stats">
+        <div><b>107</b><span>журналов</span></div>
+        <div><b>18</b><span>нозологий</span></div>
+        <div><b>24 ч</b><span>от публикации до резюме</span></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script src="assets/shell.js"></script>
+</body>
+</html>

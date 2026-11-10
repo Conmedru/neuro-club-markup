@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0050A9">
+<meta name="robots" content="noindex">
+<title>Карта навигации — Клуб неврологов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/club.css">
+  <link rel="stylesheet" href="assets/ai.css">
+<style>
+  .doc { max-width: 1120px; margin: 0 auto; padding: 56px 16px 96px; }
+  .doc h1 { margin: 10px 0 14px; }
+  .doc .lede { max-width: 760px; }
+  .principles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 44px 0 64px; }
+  .principles div { border-top: 1px solid var(--ink); padding-top: 14px; }
+  .principles b { display: block; font-family: var(--serif); font-size: 18px; font-weight: 600; margin: 8px 0 6px; line-height: 1.25; }
+  .principles p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+
+  .map { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 56px; align-items: start; margin-bottom: 72px; }
+  /* Меню-образец: как будет в левом рельсе обоих сайтов */
+  .menu { position: sticky; top: 24px; border: 1px solid var(--rule-strong); border-radius: 8px; background: var(--paper); padding: 18px 14px; }
+  .menu .grp { margin-top: 16px; }
+  .menu .grp:first-child { margin-top: 0; }
+  .menu .grp > .label { display: block; padding: 0 10px 6px; }
+  .menu a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 10px; border-radius: 5px; font-size: 14px; color: var(--ink-2); }
+  .menu a:hover { background: var(--bg); color: var(--ink); }
+  .menu a .ai { font-family: var(--mono); font-size: 10px; color: var(--ink-4); }
+  .menu .accent { margin-top: 16px; border: 1px solid var(--rule-strong); background: var(--bg); font-weight: 500; color: var(--ink); }
+  .menu .apart { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 12px; }
+
+  .groups { display: flex; flex-direction: column; gap: 40px; }
+  .group h2 { margin: 0 0 4px; }
+  .group > p { margin: 0 0 14px; color: var(--ink-3); font-size: 14.5px; max-width: 680px; }
+  .rows { border-top: 1px solid var(--ink); }
+  .row { display: grid; grid-template-columns: 200px minmax(0, 1fr) 128px; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 14px; line-height: 1.5; }
+  .row .name { font-weight: 500; color: var(--ink); }
+  .row .name small { display: block; font-weight: 400; color: var(--ink-3); font-size: 12.5px; margin-top: 2px; }
+  .row .what { color: var(--ink-2); }
+  .row .st { font-size: 12.5px; color: var(--ink-3); text-align: right; }
+  .st.ok { color: var(--ink); }
+  .st.need { color: var(--brand); font-weight: 500; }
+  .st.q { color: #9A5B00; font-weight: 500; }
+
+  .section-title { margin: 72px 0 6px; }
+  .section-note { margin: 0 0 18px; color: var(--ink-3); font-size: 14.5px; max-width: 760px; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+  .tbl th { text-align: left; font-size: 11px; font-weight: 500; letter-spacing: .045em; text-transform: uppercase; color: var(--ink-3); padding: 0 16px 10px 0; border-bottom: 1px solid var(--ink); }
+  .tbl td { padding: 11px 16px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--ink-2); }
+  .tbl td:first-child { color: var(--ink); font-weight: 500; white-space: nowrap; }
+  .tbl code { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+  .qs { counter-reset: q; list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--ink); }
+  .qs li { counter-increment: q; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 15px; line-height: 1.5; }
+  .qs li::before { content: counter(q, decimal-leading-zero); font-family: var(--mono); font-size: 12px; color: var(--brand); padding-top: 3px; }
+  .qs small { display: block; color: var(--ink-3); font-size: 13px; margin-top: 3px; }
+  @media (max-width: 960px) {
+    .principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .map { grid-template-columns: 1fr; gap: 32px; }
+    .menu { position: static; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+    .row .st { text-align: left; }
+    .tbl td:first-child { white-space: normal; }
+  }
+  @media (max-width: 600px) { .principles { grid-template-columns: 1fr; } .tbl { font-size: 13px; } }
+</style>
+</head>
+<body>
+<main class="doc">
+  <span class="label"><b>Макеты neurology-club.ru</b><span class="dot">·</span>утверждено, меню обновлено во всех макетах<span class="dot">·</span>11 октября 2026</span>
+  <h1 class="h1">Карта навигации: одно меню для клуба и ai</h1>
+  <p class="lede">Сейчас меню — плоский список разделов клуба плюс пять пунктов ai. Некоторые темы живут в двух местах
+    (гайдлайны, новости, видео, нозологии), а врач не понимает, куда идти. Ниже — одно меню для обоих сайтов, собранное
+    по задачам врача. После утверждения обновлю меню во всех макетах и сделаю недостающие страницы.</p>
+
+  <div class="principles">
+    <div><span class="label">01</span><b>Одно меню на два сайта</b><p>Так требует ТЗ (п. 5). Одинаковые группы и порядок; пункты ai помечены «ai» и открываются на ai.neurology-club.ru.</p></div>
+    <div><span class="label">02</span><b>По задачам, а не по движкам</b><p>Группы отвечают на вопрос «что я хочу сделать»: разобрать случай, узнать новое, посмотреть, поучиться.</p></div>
+    <div><span class="label">03</span><b>Одна тема — одно место</b><p>Гайдлайны, видео, новости и нозологии больше не дублируются: у каждой темы один адрес.</p></div>
+    <div><span class="label">04</span><b>Болезнь — главный вход</b><p>«Навигация по нозологиям» собирает всё по болезни сразу с обоих сайтов и заменяет рубрики клуба «Нозологии» и «Специальный раздел».</p></div>
+  </div>
+
+  <div class="map">
+    <nav class="menu" aria-label="Образец меню">
+      <div class="grp"><a href="index.html">Главная</a></div>
+      <div class="grp"><span class="label">Клиническая практика</span>
+        <a href="#">Клинразборы</a><a href="#">Статьи клуба</a><a href="cheatsheets.html">Шпаргалки и инфографика</a>
+        <a href="#">Синдромология</a><a href="#">Гайдлайны <span class="ai">ai</span></a><a href="#">Шкалы и калькуляторы <span class="ai">ai</span></a>
+      </div>
+      <div class="grp"><span class="label">Мировая неврология · ai</span>
+        <a href="#">Статьи из журналов <span class="ai">ai</span></a><a href="#">Исследования <span class="ai">ai</span></a>
+        <a href="#">Клинические случаи <span class="ai">ai</span></a><a href="#">Новости <span class="ai">ai</span></a><a href="#">Мнения экспертов <span class="ai">ai</span></a>
+      </div>
+      <div class="grp"><span class="label">Смотреть</span><a href="video.html">Видео</a></div>
+      <div class="grp"><span class="label">Учиться</span>
+        <a href="programs.html">Образовательные программы</a><a href="vestnik.html">Вестник неврологии</a>
+        <a href="#">События <span class="ai">ai</span></a><a href="medlibrary.html">Журналы-партнёры</a>
+      </div>
+      <div class="grp"><span class="label">Клуб</span>
+        <a href="experts.html">Эксперты клуба</a><a href="#">Новости клуба</a><a href="#">О клубе</a>
+      </div>
+      <a class="accent" href="#">Навигация по нозологиям →</a>
+      <div class="apart"><a href="patients.html">Пациентам</a></div>
+    </nav>
+
+    <div class="groups">
+      <section class="group">
+        <h2 class="h3">Клиническая практика</h2>
+        <p>То, за чем невролог приходит перед приёмом или после сложного случая. Первая группа — главная ценность клуба.</p>
+        <div class="rows">
+          <div class="row"><span class="name">Клинразборы<small>клуб · /articles/klinrazbor/</small></span><span class="what">Случаи с вопросами и разбором. Закрыты для гостей — начало и приглашение войти.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">Статьи клуба<small>клуб · /articles/stati/</small></span><span class="what">Авторские обзоры экспертов клуба.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">Шпаргалки и инфографика<small>клуб · /articles/shpargalki/, /infographics</small></span><span class="what">Один раздел с вкладками: шпаргалки (PDF, таблицы критериев) и инфографика — по сути один жанр «коротко и наглядно».</span><span class="st ok">есть макет, вкладки</span></div>
+          <div class="row"><span class="name">Синдромология<small>клуб · /articles/sindromology/</small></span><span class="what">Справочник синдромов и болезней от А до Я: алфавитный указатель и поиск внутри раздела.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">Гайдлайны<small>ai · /docs</small></span><span class="what">Единый каталог действующих документов: 27 российских КР Минздрава и 75 международных. Пересказы рекомендаций клуба (/articles/guidelines/) не используем — решение клиента 12.10.</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Шкалы и калькуляторы<small>ai · /tools</small></span><span class="what">84 инструмента по нозологиям; список ждёт подтверждения клиента.</span><span class="st ok">есть на ai</span></div>
+        </div>
+      </section>
+
+      <section class="group">
+        <h2 class="h3">Мировая неврология · ai</h2>
+        <p>Всё, что ai собирает из журналов и новостей. На сайте клуба эти пункты открывают ai, на ai — свои страницы.</p>
+        <div class="rows">
+          <div class="row"><span class="name">Статьи из журналов</span><span class="what">Резюме публикаций 107 журналов на русском.</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Исследования / Клинические случаи</span><span class="what">Срезы журнальных статей по типу работы (РКИ, метаанализы, когорты — метки на карточках).</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Новости</span><span class="what">Мировые новости неврологии: регуляторы, исследования, общества.</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Мнения экспертов</span><span class="what">Комментарии зарубежных экспертов (Decera и др.).</span><span class="st ok">есть на ai</span></div>
+        </div>
+      </section>
+
+      <section class="group">
+        <h2 class="h3">Смотреть</h2>
+        <p>Одно «Видео» вместо двух разделов на разных сайтах.</p>
+        <div class="rows">
+          <div class="row"><span class="name">Видео<small>клуб · /video + ai · /section/video</small></span><span class="what">Вкладки «Лекции клуба» и «Мировые конференции» (ролики ai с YouTube-каналов обществ). Подкасты клуба (/casts) не обновлялись с октября 2020 — вкладка-архив внутри «Видео» (решение клиента).</span><span class="st ok">есть макет, вкладки</span></div>
+        </div>
+      </section>
+
+      <section class="group">
+        <h2 class="h3">Учиться</h2>
+        <p>Системное обучение и «что будет»: курсы, журнал, мероприятия, партнёрские журналы.</p>
+        <div class="rows">
+          <div class="row"><span class="name">Образовательные программы</span><span class="what">Курсы и квесты с баллами НМО.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">Вестник неврологии</span><span class="what">Журнал и ежемесячный дайджест клуба.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">События<small>ai · /events</small></span><span class="what">Единый календарь: 35 конгрессов со сверенными датами и 19 календарей обществ. Анонсы конференций из «Новостей клуба» попадают сюда же.</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Журналы-партнёры<small>клуб · /Med-library/</small></span><span class="what">Бывшая Med-library: «журналы-партнёры» понятнее врачу, адрес сохраняется.</span><span class="st ok">есть макет</span></div>
+        </div>
+      </section>
+
+      <section class="group">
+        <h2 class="h3">Клуб</h2>
+        <p>Про сообщество: кто мы, что нового в клубе.</p>
+        <div class="rows">
+          <div class="row"><span class="name">Эксперты клуба</span><span class="what">Бывшая «Редколлегия».</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">Новости клуба<small>клуб · /news/</small></span><span class="what">Новости клуба и российской неврологии (раздел живой — последние в октябре 2026).</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">О клубе<small>/about/, /contacts/</small></span><span class="what">О клубе, контакты, партнёры, правила и соглашения (последние — в подвале).</span><span class="st ok">есть макет</span></div>
+        </div>
+      </section>
+
+      <section class="group">
+        <h2 class="h3">Отдельно</h2>
+        <div class="rows">
+          <div class="row"><span class="name">Навигация по нозологиям<small>ai · /navigation</small></span><span class="what">Акцентный вход: болезнь → все материалы клуба и ai по ней. Заменяет рубрики клуба «Нозологии» и «Специальный раздел» (/heading/…): те же 19 нозологий и 17 спецразделов, что в рубрикаторе ai.</span><span class="st ok">есть на ai</span></div>
+          <div class="row"><span class="name">Пациентам</span><span class="what">Другая аудитория — внизу меню, отдельно от профессиональных разделов.</span><span class="st ok">есть макет</span></div>
+          <div class="row"><span class="name">В тренде<small>клуб · /articles/v-trende/</small></span><span class="what">Не пункт меню, а подборка на главной: это отбор статей, а не отдельный тип материала.</span><span class="st ok">блок главной</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <h2 class="h2 section-title">Было → стало</h2>
+  <p class="section-note">Каждый раздел нынешнего сайта клуба получает место в новом меню. Адреса не меняются — меняется только, где пункт стоит в меню.</p>
+  <table class="tbl">
+    <thead><tr><th>Сейчас на сайте клуба</th><th>В новом меню</th><th>Что делаем</th></tr></thead>
+    <tbody>
+      <tr><td>Клинразбор</td><td>Клиническая практика → Клинразборы</td><td>Страница списка — <a href="klinrazbors.html">klinrazbors.html</a></td></tr>
+      <tr><td>Статьи</td><td>Клиническая практика → Статьи клуба</td><td>Страница списка — <a href="articles.html">articles.html</a></td></tr>
+      <tr><td>Шпаргалки, Инфографика</td><td>Клиническая практика → Шпаргалки и инфографика</td><td>Один раздел, две вкладки</td></tr>
+      <tr><td>Синдромология</td><td>Клиническая практика → Синдромология</td><td>Справочник А–Я</td></tr>
+      <tr><td>Гайдлайны</td><td>Клиническая практика → Гайдлайны (ai)</td><td>Единый каталог действующих документов; пересказы клуба не используем</td></tr>
+      <tr><td>Видео, Подкасты</td><td>Смотреть → Видео</td><td>Вкладки клуб / мир; подкасты — архив (решено)</td></tr>
+      <tr><td>Med-library</td><td>Учиться → Журналы-партнёры</td><td>Переименование пункта (решено)</td></tr>
+      <tr><td>Вестник, Образовательные программы</td><td>Учиться</td><td>Без изменений</td></tr>
+      <tr><td>Редколлегия</td><td>Клуб → Эксперты клуба</td><td>Уже переименовано (решение клиента)</td></tr>
+      <tr><td>Новости</td><td>Клуб → Новости клуба; анонсы — в События</td><td>Страница новостей</td></tr>
+      <tr><td>Нозологии, Специальный раздел</td><td>Навигация по нозологиям (ai)</td><td>Рубрики клуба привязываются к рубрикатору ai</td></tr>
+      <tr><td>Для специалиста, Врачебная жизнь</td><td>—</td><td>Убираем (решение клиента); статьи фильтруются по нозологиям</td></tr>
+      <tr><td>В тренде</td><td>Блок на главной</td><td>Убрать из меню</td></tr>
+      <tr><td>О клубе, О сайте, Контакты, Правила, Соглашения</td><td>Клуб → О клубе; документы — в подвал</td><td>Страница «О клубе»</td></tr>
+      <tr><td>Пациентам</td><td>Отдельно внизу меню</td><td>Без изменений</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="h2 section-title">Шапка, подвал, телефон</h2>
+  <table class="tbl">
+    <tbody>
+      <tr><td>Шапка</td><td>Знак клуба, единый поиск по клубу и ai (⌘K), вход / кабинет. Хлебные крошки — на внутренних страницах.</td></tr>
+      <tr><td>Подвал</td><td>Короткие ссылки на группы меню, «Пациентам», документы (правила, соглашения, политика ПДн), контакты, Telegram клуба, партнёры.</td></tr>
+      <tr><td>Телефон</td><td>Кнопка меню в шапке; меню выезжает слева с теми же группами, «Навигация по нозологиям» — первой строкой.</td></tr>
+      <tr><td>Кабинет</td><td>Один аккаунт на оба сайта: профиль, рассылки, избранное, программы, сертификаты НМО.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="h2 section-title">Решения клиента (12.10)</h2>
+  <ol class="qs">
+    <li><span>Гайдлайны — только список действующих документов; пересказы клуба не нужны.</span></li>
+    <li><span>Подкасты — в архив внутри «Видео».</span></li>
+    <li><span>Рубрики «Для специалиста» и «Врачебная жизнь» — убираем.</span></li>
+    <li><span>Med-library в меню — «Журналы-партнёры».</span></li>
+    <li><span>Контакты, документы и соцсети для подвала и «О клубе» — с neurology-club.ru (в т. ч. Политика обработки ПД в PDF).</span></li>
+  </ol>
+</main>
+</body>
+</html>

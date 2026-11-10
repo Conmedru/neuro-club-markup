@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Виджеты ai-части — проверка встраивания</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>body{margin:0;background:#FAFAF9;padding:40px;font-family:sans-serif}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;max-width:1200px}</style>
+</head><body>
+<div class="grid">
+  <div data-neuro-widget="today" data-limit="5"></div>
+  <div data-neuro-widget="news" data-limit="4"></div>
+  <div data-neuro-widget="events" data-limit="4"></div>
+</div>
+<!-- На сайте клуба: src="https://ai.neurology-club.ru/widgets/club.js" -->
+<script src="http://localhost:3000/widgets/club.js" defer></script>
+</body></html>
